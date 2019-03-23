@@ -24,8 +24,19 @@ new = []
 for d in data:
     if len(d) < 100:
         new.append(d)
-# print('一共有', len(new), '筆留言長度小於100')
+print('一共有', len(new), '筆留言長度小於100')
+
 import random
 x = random.randint(0, len(new))
 print('以下是第', x, '筆留言')
 print(new[x])
+
+good = []                   # 建立good清單
+for d in data:              # 在data清單中取出每一筆留言
+    if 'good' in d:         # 如果d留言中有'good'字串(True)
+        good.append(d)      # 將該留言加到good清單中
+print('一共有', len(good), '筆留言提到Good')
+y = random.randint(0, len(good))
+print('這是第', y, '筆留言')
+print(good[y])
+
