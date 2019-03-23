@@ -43,3 +43,18 @@ y = random.randint(0, len(good))
 print('這是第', y, '筆留言')
 print(good[y])
 
+# 快速篩選list comprehension
+# output = [(number-1) for number in reference if number % 2 == 0]
+# 輸出=[(運算式or變數) for 字串 in 清單 if 條件式]
+ 
+good = [d for d in data if 'good' in d]
+print(len(good)
+
+# 列出True or False
+bad = ['bad' in d for d in data]
+print(bad)
+
+bad = []
+for d in data:
+    bad.append('bad' in d)
+print(bad)
